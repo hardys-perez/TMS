@@ -20,9 +20,9 @@ namespace TMS.Controllers
 
         [HttpGet]
         [Route("")]
-        public Task<IEnumerable<Truck>> GetTrucksAsync(int enterpriseID)
+        public async Task<IEnumerable<Truck>> GetTrucksAsync(int enterpriseID)
         {
-            return _truckRepository.GetTrucksByEnterpriseAsync(enterpriseID);
+            return await _truckRepository.GetTrucksByEnterpriseAsync(enterpriseID);
         }
     }
 }
